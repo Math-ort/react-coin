@@ -9,7 +9,6 @@ function AppRoutes() {
         <>
         <nav>
             <Link to="/">Home</Link>
-            <Link to="/coin/:id">Coin</Link>
             <Link to="/favorites">Favorites</Link>
         </nav>
         <Routes>

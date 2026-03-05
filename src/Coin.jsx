@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import './App.css';
 
 function Coin () {
     const {id} = useParams();
@@ -28,12 +29,18 @@ function Coin () {
         <>    
         {!coin.name ? <h2>Cargando...</h2>
             :
-       <h1>Criptomoneda: {coin.name}</h1>
-       
+        <div className="cripto-card">   
+        <h1>Criptomoneda: {coin.name}</h1>
+        <h2>Ranking: {coin.rank}</h2>
+        <h2>Símbolo: {coin.symbol}</h2> 
+        <h2>Precio en USD: {Number(coin.priceUsd).toFixed(2)}</h2>
+        <h2>Variacion ultimas 24 hs: {Number(coin.changePercent24Hr).toFixed(2)}</h2>
+        <Link to="/">Volver a Home </Link>
+       </div>
        
        }
-       
     </>
+
     )
 };
 
