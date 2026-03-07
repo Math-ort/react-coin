@@ -18,20 +18,26 @@ function Favorites () {
     getCoins();
     }, []);
     if (coins.length === 0) {
-        return  <h1>no hay criptomonedas favoritas</h1>
+        return  <h1 className="empty">no hay criptomonedas favoritas</h1>
     }
     return (
-        <div>
-            <h1> Criptomonedas favoritas </h1>
+        <div className="page">
+            <h1 className="title"> Criptomonedas favoritas </h1>
+            <div className="grid">
             {coins.map(coin => (
-                <div key={coin.id}>
-                    <Link to={`/coin/${coin.id}`}>
-                        {coin.name}
+                    <Link 
+                        to={`/coin/${coin.id}`}
+                        key={coin.id}
+                        className="favorite-card">
+
+                        <h2>{coin.name}</h2>
+                        <p>{coin.symbol}</p>
+                        <span>Rank #{coin.rank}</span>
                     </Link>
+                ))}
                 </div>
 
 
-            ))}
         </div>
     );
 }

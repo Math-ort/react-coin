@@ -73,7 +73,7 @@ function Coin () {
 
             )}
 
-        <Link to="/">Volver a Home </Link>
+        <Link to="/" className="homelink">Volver a Home </Link>
        </div>
        
        }

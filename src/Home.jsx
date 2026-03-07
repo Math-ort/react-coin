@@ -25,19 +25,22 @@ function Home() {
 
     return (
         <>
-        <h1>Listado de criptomonedas:</h1>
-        <ul>
+        <h1 className="title">Listado de criptomonedas:</h1>
+        <div className="grid">
+
+       
             {coins.map((cripto) => {
                 const {id,rank, symbol, name} = cripto;
                 return (<Link to={`/coin/${id}`} key={id}>
-                <li className="cripto-card">
+                <div className="cripto-card">
                     <h2>Ranking: {rank}</h2>
                     <h2>Nombre: {name}</h2>
                     <h3>Símbolo: {symbol}</h3>                
-                </li>
+               </div>
                 </Link>)
             })}
-        </ul>
+        
+       </div>
         
         </>
     )

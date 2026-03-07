@@ -1,30 +1,161 @@
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    background-color: rgb(203, 202, 202);
-    font-size: 25px;
-    
-}
-h1 {
+
+body {
+    background:whitesmoke;
+    color: rgba(121, 12, 164, 0.822);
+    font-family: Inter, system-ui, sans-serif;
+    margin: 0;
+    padding: 30px;
+  }
+  
+  .title {
     text-align: center;
-}
-ul {
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+
+  
+  nav {
+    background-color: #1c1c24;
+    width: 100%;
+    padding: 20px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.cripto-card {
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(197, 119, 17);
+    font-weight: 500;
+    transition: 0.3s;
+
+  }
+  
+  nav a:hover {
+    color: #a855f7;
+  }
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+  }
+  
+  
+  .coin-card {
+    background: #7e7e8d;
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+  
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .coin-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border: 1px solid #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+  }
+  
+  .favorite-card {
+    background: linear-gradient(
+      145deg,
+      #1c1c24,
+      #14141b
+    );
+  
+    padding: 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+  
+    position: relative;
+  
+    transition: 0.35s;
+    overflow: hidden;
+  }
+  
+
+  
+  .favorite-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+  
+    background: linear-gradient(
+      45deg,
+      #852fd4,
+      #6f38a2,
+      #6627a1
+    );
+  
+    filter: blur(10px);
+    opacity: 0;
+  
+    transition: 0.4s;
+  }
+  
+  .favorite-card:hover::before {
+    opacity: 1;
+  }
+  
+  
+  .favorite-card * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .favorite-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: #242457;
+  }
+   
+  .cripto-card {
+    list-style-type: none;
+    background: white;
+    padding: 25px;
+  
+    border-radius: 16px;
+  
+    border: 2px solid #9333ea;
+  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  
+    transition: 0.25s;
+  }
+  
+.homelink{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    border-color: purple;
-    list-style: none;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    width: 400px;
+    justify-content:right}
     
-}
+  
+  .button {
+    margin-top: 20px;
+    padding: 12px 20px;
+  
+    border-radius: 10px;
+    border: none;
+  
+    background: #9333ea;
+    color: white;
+  
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .button:hover {
+    background: #a855f7;
+    transform: scale(1.05);
+  }
+
+  .empty {
+    text-align: center;
+    opacity: 0.6;
+  }
